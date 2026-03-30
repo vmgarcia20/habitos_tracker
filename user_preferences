@@ -1,0 +1,12 @@
+--
+-- Table structure for table `user_preferences`
+--
+
+CREATE TABLE `user_preferences` (
+  `user_id` int(10) UNSIGNED NOT NULL,
+  `quiet_start` time DEFAULT NULL,
+  `quiet_end` time DEFAULT NULL,
+  `default_reminder_time` time DEFAULT NULL,
+  `nudges_enabled` tinyint(1) NOT NULL DEFAULT 1
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
