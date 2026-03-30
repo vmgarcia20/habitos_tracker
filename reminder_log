@@ -1,0 +1,13 @@
+--
+-- Table structure for table `reminder_log`
+--
+
+CREATE TABLE `reminder_log` (
+  `reminder_id` int(10) UNSIGNED NOT NULL,
+  `habit_id` int(10) UNSIGNED NOT NULL,
+  `scheduled_at` timestamp NOT NULL DEFAULT current_timestamp(),
+  `sent_at` timestamp NULL DEFAULT NULL,
+  `status` enum('SCHEDULED','SENT','SKIPPED','FAILED') NOT NULL DEFAULT 'SCHEDULED'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
