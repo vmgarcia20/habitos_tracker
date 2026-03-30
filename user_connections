@@ -1,0 +1,13 @@
+--
+-- Table structure for table `user_connections`
+--
+
+CREATE TABLE `user_connections` (
+  `connection_id` int(10) UNSIGNED NOT NULL,
+  `user_id` int(10) UNSIGNED NOT NULL,
+  `partner_user_id` int(10) UNSIGNED NOT NULL,
+  `status` enum('PENDING','ACCEPTED','REJECTED','BLOCKED') NOT NULL DEFAULT 'PENDING',
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
