@@ -1,0 +1,12 @@
+-- Table structure for table `habit_completions`
+--
+
+CREATE TABLE `habit_completions` (
+  `completion_id` int(10) UNSIGNED NOT NULL,
+  `habit_id` int(10) UNSIGNED NOT NULL,
+  `completion_date` date NOT NULL,
+  `status` enum('COMPLETED','MISSED') NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
