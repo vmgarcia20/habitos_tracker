@@ -1,0 +1,11 @@
+--
+-- Table structure for table `schedule_days`
+--
+
+CREATE TABLE `schedule_days` (
+  `schedule_day_id` int(10) UNSIGNED NOT NULL,
+  `schedule_id` int(10) UNSIGNED NOT NULL,
+  `day_of_week` tinyint(3) UNSIGNED NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
