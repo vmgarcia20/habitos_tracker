@@ -1,0 +1,14 @@
+--
+-- Table structure for table `habit_schedules`
+--
+
+CREATE TABLE `habit_schedules` (
+  `schedule_id` int(10) UNSIGNED NOT NULL,
+  `habit_id` int(10) UNSIGNED NOT NULL,
+  `frequency` enum('DAILY','WEEKLY','CUSTOM') NOT NULL,
+  `start_date` date NOT NULL,
+  `reminder_time` time DEFAULT NULL,
+  `enabled` tinyint(1) NOT NULL DEFAULT 1
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
